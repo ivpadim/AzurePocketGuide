@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e74aef32-41fb-45fb-a0e3-fef7e433f3ea</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Microsoft.AzurePocketGuide</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IServicesRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ServicesRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ServicesPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPage.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\MediumGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DarkGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Web.config" />
+    <Content Include="$(MSBuildThisFileDirectory)Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+</Project>
