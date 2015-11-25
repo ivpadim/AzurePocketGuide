@@ -10,11 +10,12 @@
                             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                             mvvm:ViewModelLocator.AutoWireViewModel="True"
-                            mc:Ignorable="d">
+                            mc:Ignorable="d"
+                            d:DataContext="{d:DesignData /SampleData/ServicesPageViewModelSampleData.xaml}">
 
     <Page.Resources>
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
+        <x:String x:Key="AppName">Azure Pocket Guide</x:String>
     </Page.Resources>
 
     <!--
@@ -58,12 +59,8 @@
         </Grid>
         <ListView ItemsSource="{Binding Items}"
                   SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                  ItemTemplate="{StaticResource IconListItemTemplate}"
                   Grid.Row="1">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Name}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
         </ListView>
     </Grid>
 </prism:VisualStateAwarePage>

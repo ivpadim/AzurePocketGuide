@@ -1,0 +1,17 @@
+﻿<ViewModels:ServicesPageViewModel xmlns:ViewModels="using:Microsoft.AzurePocketGuide.ViewModels" xmlns:Models="using:Microsoft.AzurePocketGuide.Models">
+	<ViewModels:ServicesPageViewModel.Items>
+		<Models:ServiceItem Description="Integer donec quisque" Id="Curabitur cras aenean class duis" Image="Mauris nullam vestibulum" Name="Curae aliquam" Version="Maecenas nam"/>
+		<Models:ServiceItem Description="Accumsan convallis amet dignissim" Id="Nunc phasellus aptent" Image="Ante adipiscing etiam" Name="Sed vivamus praesent consequat" Version="Aliquam aliquet fusce lorem"/>
+		<Models:ServiceItem Description="Cursus commodo dis proin conubia" Id="Blandit auctor morbi" Image="Elementum est bibendum dictum" Name="Nulla congue parturient" Version="Cubilia facilisis"/>
+		<Models:ServiceItem Description="Dictumst leo dolor" Id="Vestibulum augue" Image="Mus egestas" Name="Vestibulum dapibus adipiscing hac lectus" Version="Fames fermentum parturient nec"/>
+		<Models:ServiceItem Description="Gravida iaculis per vestibulum" Id="Arcu felis ipsum eleifend" Image="Diam eget fringilla ligula litora" Name="Vestibulum libero euismod feugiat non" Version="Facilisi elit"/>
+		<Models:ServiceItem Description="Inceptos luctus sed hendrerit magnis" Id="Justo habitasse faucibus lacus adipiscing" Image="Interdum lobortis parturient" Name="Habitant lorem" Version="Magna sem himenaeos vestibulum"/>
+		<Models:ServiceItem Description="Nascetur vestibulum sit" Id="Mattis imperdiet massa mauris" Image="Neque vel malesuada enim" Name="Metus mollis morbi" Version="Pharetra penatibus montes"/>
+		<Models:ServiceItem Description="Eros nam pulvinar" Id="Placerat adipiscing porttitor" Image="Nibh nostra nulla nisi parturient" Name="Netus erat tincidunt" Version="Sagittis lacinia laoreet"/>
+		<Models:ServiceItem Description="Natoque vestibulum primis" Id="Nisl ornare sed porta" Image="Senectus dis adipiscing est" Name="Platea vestibulum" Version="Nunc hac parturient posuere sociosqu"/>
+		<Models:ServiceItem Description="Risus pretium velit" Id="Odio leo" Image="Vestibulum rutrum suscipit nec" Name="Potenti purus vestibulum mus" Version="Rhoncus sapien orci non pede"/>
+	</ViewModels:ServicesPageViewModel.Items>
+	<ViewModels:ServicesPageViewModel.SelectedItem>
+		<Models:ServiceItem Description="Sem sit sodales adipiscing semper" Id="Torquent per quam sed vitae" Image="Curae vehicula urna viverra" Name="Class ultrices quis" Version="Aliquam parturient vestibulum sociis vestibulum"/>
+	</ViewModels:ServicesPageViewModel.SelectedItem>
+</ViewModels:ServicesPageViewModel>

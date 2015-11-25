@@ -13,25 +13,27 @@ namespace Microsoft.AzurePocketGuide.ViewModels
 		private List<ServiceItem> _items;
 		private ServiceItem _selectedItem;
 
+		public ServicesPageViewModel() { }
+
 		public ServicesPageViewModel(IServicesRepository repository)
 		{
 			_repository = repository;
-			this.LoadData();
+			LoadData();
 		}
 
 		public async void LoadData()
 		{
 			try
 			{
-				this.Items = await _repository.GetAllServiceItems();
+				Items = await _repository.GetAllServiceItems();
 			}
-			catch(Exception e)
+			catch (Exception e)
 			{
 				await new MessageDialog(e.Message, "Error loading items").ShowAsync();
 			}
 		}
 
-		
+
 		public List<ServiceItem> Items
 		{
 			get { return _items; }

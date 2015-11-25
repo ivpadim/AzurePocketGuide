@@ -10,15 +10,15 @@ namespace Microsoft.AzurePocketGuide.Services
 {
 	public class ServicesRepository : IServicesRepository
 	{
-		MobileServiceClient _mobileService;
-		private IMobileServiceSyncTable<ServiceItem> _table;
+		private readonly MobileServiceClient _mobileService;
+		private readonly IMobileServiceSyncTable<ServiceItem> _table;
 
 		public ServicesRepository()
 		{
 			_mobileService = new MobileServiceClient("YOUR URL HERE", "YOUR APP SECRET HERE");
 			_table = _mobileService.GetSyncTable<ServiceItem>();
 
-			this.InitLocalStore();
+			InitLocalStore();
 		}
 
 

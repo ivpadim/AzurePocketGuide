@@ -8,16 +8,28 @@
                             xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
                             mvvm:ViewModelLocator.AutoWireViewModel="True"
                             mc:Ignorable="d"
-                            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+                            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                            d:DataContext="{d:DesignData /SampleData/ServicesPageViewModelSampleData.xaml}">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+    
+
+        <StackPanel Margin="12,17,0,10.5">
+            <TextBlock Text="azure pocket guide"
+                       Style="{StaticResource TitleTextBlockStyle}" />
+            <TextBlock Text="services"
+                       Margin="9,-7,0,0"
+                       Style="{StaticResource HeaderTextBlockStyle}" />
+        </StackPanel>
+
         <ListView ItemsSource="{Binding Items}"
-                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Name}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                  ItemsPanel="{StaticResource TilePanelTemplate}"
+                  ItemTemplate="{StaticResource TileItemTemplate}"
+                  Margin="11,0,0,0"
+                  Grid.Row="1" />
     </Grid>
 </prism:VisualStateAwarePage>

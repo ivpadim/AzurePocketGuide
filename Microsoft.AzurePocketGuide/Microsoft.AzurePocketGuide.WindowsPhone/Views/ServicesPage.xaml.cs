@@ -9,6 +9,5 @@ namespace Microsoft.AzurePocketGuide.Views
 	/// </summary>
 	public sealed partial class ServicesView : VisualStateAwarePage
 	{
-		
 	}
 }
