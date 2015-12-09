@@ -26,7 +26,18 @@ namespace Microsoft.AzurePocketGuide
 		/// <param name="args">The launch arguments passed to the application</param>
 		protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
 		{
+			// Use the logical name for the view to navigate to. The default convention
+			// in the NavigationService will be to append "Page" to the name and look 
+			// for that page in a .Views child namespace in the project. IF you want another convention
+			// for mapping view names to view types, you can override 
+			// the MvvmAppBase.GetPageNameToTypeResolver method
+			NavigationService.Navigate("Services", null);
+			return Task.FromResult<object>(null);
+		}
 
+		protected override void OnLaunched(LaunchActivatedEventArgs args)
+		{
+			base.OnLaunched(args);
 #if WINDOWS_PHONE_APP
 
 			var statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
@@ -39,16 +50,6 @@ namespace Microsoft.AzurePocketGuide
 
 			}
 #endif
-
-
-
-			// Use the logical name for the view to navigate to. The default convention
-			// in the NavigationService will be to append "Page" to the name and look 
-			// for that page in a .Views child namespace in the project. IF you want another convention
-			// for mapping view names to view types, you can override 
-			// the MvvmAppBase.GetPageNameToTypeResolver method
-			NavigationService.Navigate("Services", null);
-			return Task.FromResult<object>(null);
 		}
 
 		/// <summary>

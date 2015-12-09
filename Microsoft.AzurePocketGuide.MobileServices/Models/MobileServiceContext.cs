@@ -1,9 +1,9 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
+using Microsoft.AzurePocketGuide.MobileServices.Models.Configurations;
 using Microsoft.WindowsAzure.Mobile.Service;
 using Microsoft.WindowsAzure.Mobile.Service.Tables;
-using Microsoft.AzurePocketGuide.MobileServices.DataObjects;
 
 namespace Microsoft.AzurePocketGuide.MobileServices.Models
 {
@@ -27,7 +27,10 @@ namespace Microsoft.AzurePocketGuide.MobileServices.Models
 		{
 		}
 
-		public DbSet<ServiceItem> ServiceItems { get; set; }
+		public DbSet<AzureCategory> AzureCategory { get; set; }
+		public DbSet<AzureProduct> AzureProduct { get; set; }
+		public DbSet<AzureProductInformation> AzureProduct_Information { get; set; }
+		public DbSet<AzureServiceType> AzureService_Type { get; set; }
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
@@ -40,6 +43,11 @@ namespace Microsoft.AzurePocketGuide.MobileServices.Models
 			modelBuilder.Conventions.Add(
 				new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
 					"ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
+
+			modelBuilder.Configurations.Add(new AzureCategoryConfiguration());
+			modelBuilder.Configurations.Add(new AzureProductConfiguration());
+			modelBuilder.Configurations.Add(new AzureProductInformationConfiguration());
+			modelBuilder.Configurations.Add(new AzureServiceTypeConfiguration());
 		}
 	}
 

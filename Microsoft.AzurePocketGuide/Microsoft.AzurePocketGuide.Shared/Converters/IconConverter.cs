@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
 namespace Microsoft.AzurePocketGuide.Converters
 {
+	/// <summary>
+	/// Converter for the icon resources
+	/// </summary>
 	public class IconConverter : IValueConverter
 	{
 		public object Convert(object value, Type targetType, object parameter, string language)

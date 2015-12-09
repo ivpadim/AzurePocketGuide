@@ -2,7 +2,7 @@
 
 namespace Microsoft.AzurePocketGuide.Views
 {
-	sealed partial class ServicesPage : VisualStateAwarePage
+	public sealed partial class ServicesPage : VisualStateAwarePage
 	{
 		public ServicesPage()
 		{

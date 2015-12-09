@@ -11,25 +11,30 @@
                             Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                             d:DataContext="{d:DesignData /SampleData/ServicesPageViewModelSampleData.xaml}">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-    
-
-        <StackPanel Margin="12,17,0,10.5">
-            <TextBlock Text="azure pocket guide"
-                       Style="{StaticResource TitleTextBlockStyle}" />
-            <TextBlock Text="services"
-                       Margin="9,-7,0,0"
-                       Style="{StaticResource HeaderTextBlockStyle}" />
-        </StackPanel>
-
-        <ListView ItemsSource="{Binding Items}"
-                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
-                  ItemsPanel="{StaticResource TilePanelTemplate}"
-                  ItemTemplate="{StaticResource TileItemTemplate}"
-                  Margin="11,0,0,0"
-                  Grid.Row="1" />
+        <Pivot ItemsSource="{Binding Items}"
+               Title="azure pocket guide"
+               CommonNavigationTransitionInfo.IsStaggerElement="True"
+               HeaderTemplate="{StaticResource PivotHeaderTemplate}">
+            <Pivot.ItemTemplate>
+                <DataTemplate>
+                    <ListView ItemsSource="{Binding Products}"
+                              SelectionChanged="ListView_SelectionChanged"
+                              ContinuumNavigationTransitionInfo.ExitElementContainer="True"
+                              Padding="-5,0,-10,0"
+                              Margin="0,-20,0,0"
+                              ItemTemplate="{StaticResource TileItemTemplate}"
+                              ItemsPanel="{StaticResource TilePanelTemplate}" />
+                </DataTemplate>
+            </Pivot.ItemTemplate>
+        </Pivot>
+        <ProgressRing  IsActive="{Binding IsWorking}"
+                       Foreground="{StaticResource AccentColor}" />
     </Grid>
+    <prism:VisualStateAwarePage.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Refresh"
+                          Label="Refresh"
+                          Command="{Binding RefreshCommand}" />
+        </CommandBar>
+    </prism:VisualStateAwarePage.BottomAppBar>
 </prism:VisualStateAwarePage>

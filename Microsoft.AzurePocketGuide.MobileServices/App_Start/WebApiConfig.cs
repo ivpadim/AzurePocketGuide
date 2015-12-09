@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Web.Http;
+using AutoMapper;
 using Microsoft.AzurePocketGuide.MobileServices.DataObjects;
 using Microsoft.AzurePocketGuide.MobileServices.Models;
 using Microsoft.WindowsAzure.Mobile.Service;
@@ -18,76 +19,92 @@ namespace Microsoft.AzurePocketGuide.MobileServices
 			// Use this class to set WebAPI configuration options
 			HttpConfiguration config = ServiceConfig.Initialize(new ConfigBuilder(options));
 
+			Mapper.Initialize(cfg =>
+			{
+				cfg.CreateMap<AzureCategory, Category>()
+						.ForMember(dest => dest.CategoryId, map => map.MapFrom(x => x.AzureCategoryId))
+						.ForMember(dest => dest.Description, map => map.MapFrom(x => x.AzureCategoryDescription))
+						.ForMember(dest => dest.Status, map => map.MapFrom(x => x.AzureCategoryStatus));
+
+				cfg.CreateMap<AzureServiceType, ServiceType>()
+						.ForMember(dest => dest.ServiceTypeId, map => map.MapFrom(x => x.AzureServiceTypeId))
+						.ForMember(dest => dest.Description, map => map.MapFrom(x => x.AzureServiceTypeDescription))
+						.ForMember(dest => dest.Status, map => map.MapFrom(x => x.AzureServiceTypeStatus));
+
+				cfg.CreateMap<AzureProduct, Product>()
+						.ForMember(dest => dest.ProductId, map => map.MapFrom(x => x.AzureProductId))
+						.ForMember(dest => dest.ServiceTypeId, map => map.MapFrom(x => x.AzureServiceTypeId))
+						.ForMember(dest => dest.Description, map => map.MapFrom(x => x.AzureProductDescription))
+						.ForMember(dest => dest.Icon, map => map.MapFrom(x => x.AzureProductIcon))
+						.ForMember(dest => dest.Status, map => map.MapFrom(x => x.AzureProductStatus));
+
+				cfg.CreateMap<AzureProductInformation, ProductInformation>()
+						.ForMember(dest => dest.ProductInformationId, map => map.MapFrom(x => x.AzureProductInformationId))
+						.ForMember(dest => dest.ProductId, map => map.MapFrom(x => x.AzureProductId))
+						.ForMember(dest => dest.CategoryId, map => map.MapFrom(x => x.AzureCategoryId))
+						.ForMember(dest => dest.Description, map => map.MapFrom(x => x.AzureProductInformationDescription))
+						.ForMember(dest => dest.ProductInformationDate, map => map.MapFrom(x => x.InformationDate))
+						.ForMember(dest => dest.Status, map => map.MapFrom(x => x.AzureProductInformationStatus));
+			});
+
+
+
 			// To display errors in the browser during development, uncomment the following
 			// line. Comment it out again when you deploy your service for production use.
 			// config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 
 			Database.SetInitializer(new MobileServiceInitializer());
+	
 		}
 	}
 
 	public class MobileServiceInitializer : DropCreateDatabaseIfModelChanges<MobileServiceContext>
 	{
+		
 		protected override void Seed(MobileServiceContext context)
 		{
-			List<ServiceItem> services = new List<ServiceItem>
+
+
+			var categories = new List<AzureCategory>
 			{
-				new ServiceItem { Id = Guid.Parse("1dd27c56-ebe0-4b4a-bc5f-97d998695b2b").ToString(), Name = "Azure Active Directory B2C", Image="active-directory", Description = "Azure Active Directory, the cloud service with the proven ability to handle billions of authentications per day, extends its capabilities to manage consumer identities with a new service: Azure Active Directory B2C, now in public preview. Azure Active Directory B2C is a comprehensive, identity management solution for your consumer-facing applications that can be easily integrated to any platform, and accessible from any device. The service will be free during the public preview period."},
-				new ServiceItem { Id = Guid.Parse("8983cfa7-c8d0-4233-8bb3-18036f262815").ToString(), Name = "Azure Active Directory", Image="active-directory", Description = "Azure Active Directory provides identity management and access control for your cloud applications. To simply user access to cloud applications, you can synchronize on-premises identities, and enable single sign-on. Azure Active Directory comes in 3 editions: Free, Basic, and Premium."},
-				new ServiceItem { Id = Guid.Parse("238ee599-7dbe-4150-a524-bfabb277ff58").ToString(), Name = "Azure AD Domain Services", Image="active-directory", Description = "Azure Active Directory Domain Services provide scalable, high-performance, managed domain services such as domain-join, LDAP, Kerberos, Windows Integrated Authentication and Group Policy support. With the click of a button, administrators can enable managed domain services for virtual machines and directory-aware applications deployed in Azure Infrastructure Services. Built on the same underlying technology as Windows Server Active Directory, Azure Active Directory Domain Services provide an easy way to migrate traditional on-premises applications to the cloud."},
-				new ServiceItem { Id = Guid.Parse("84182759-b52e-4461-ac85-f3e74b45918a").ToString(), Name = "API Management", Image="api-management", Description = "Azure API Management lets you publish APIs to developers, partners, and employees securely and at scale." },
-				new ServiceItem { Id = Guid.Parse("5a43cead-e70f-4048-9804-ad958e107039").ToString(), Name = "Application Gateway", Image="load-balancer", Description = "Azure Application Gateway is an Azure-managed layer-7 solution providing HTTP load balancing, SSL termination, and session-based cookie affinity to Internet-facing or internal web applications." },
-				new ServiceItem { Id = Guid.Parse("133d5396-7125-44dc-984f-32a41de56ba2").ToString(), Name = "Visual Studio Application Insights", Image="application-insights", Description = "Visual Studio Application Insights is an all-in-one telemetry solution that can help you detect issues, solve problems, and continuously improve your device and web applications. It gives real-time, 360-degree views of your apps' availability, performance, and usage. It supports Java, iOS, Android, .NET, and web apps on Azure or your own servers." },
-				new ServiceItem { Id = Guid.Parse("134bb90a-bc32-46cc-9dcb-60f09eaa9796").ToString(), Name = "App Service", Image="app-service", Description = "Azure App Service lets you create apps faster with a one-of-a kind cloud service to quickly and easily create enterprise-ready web and mobile apps for any platform or device and deploy them on a scalable and reliable cloud infrastructure." },
-				new ServiceItem { Id = Guid.Parse("b5724a69-6512-48b9-80c7-91935bb1e115").ToString(), Name = "Automation", Image="automation", Description = "Azure Automation lets you create, deploy, monitor, and maintain resources in your Azure environment automatically by using a highly scalable and reliable workflow execution engine." },
-				new ServiceItem { Id = Guid.Parse("9cabb230-4be8-4b82-99db-5ab16e9fe060").ToString(), Name = "Backup", Image="backup", Description = "On your corporate laptops, Azure Backup protects Windows client data and shared files and folders. In your datacenter, integrated with System Center Data Protection Manager (DPM), Backup protects Microsoft SharePoint, Exchange, SQL Server, Hyper-V virtual machines, and other applications." },
-				new ServiceItem { Id = Guid.Parse("71033dde-dccf-4f7c-8ea5-21396985ff7b").ToString(), Name = "Batch", Image="batch", Description = "Azure Batch makes it easy to run large-scale parallel and high-performance computing (HPC) workloads in Azure. Use Batch to scale out parallel workloads, manage the execution of tasks in a queue, and cloud-enable applications to offload compute jobs to the cloud." },
-				new ServiceItem { Id = Guid.Parse("c93deef5-6b3f-4305-ac83-a6b4e9446b19").ToString(), Name = "BizTalk Services",  Image="biztalk-services", Description = "Azure BizTalk Services is a powerful and extensible cloud-based integration service. It provides B2B and EAI capabilities for delivering cloud and hybrid integration solutions." },
-				new ServiceItem { Id = Guid.Parse("fb5e7072-8718-4453-b88c-52ca9030ff09").ToString(), Name = "CDN",  Image="cdn", Description = "Azure Content Delivery Network lets you deliver high-bandwidth content to users around the world with low latency and high availability via a robust network of global data centers." },
-				new ServiceItem { Id = Guid.Parse("7e1ea87b-9a81-43b3-855b-b7a4b1039251").ToString(), Name = "Cloud Services", Image="cloud-services", Description = "Azure Cloud Services removes the need to manage server infrastructure. With web and worker roles, it lets you quickly build, deploy, and manage modern applications." },
-				new ServiceItem { Id = Guid.Parse("2cde435f-3297-4bd4-9690-beff18c7ea5e").ToString(), Name = "Data Catalog", Image="data-catalog", Description = "Azure Data Catalog is a fully managed service that serves as a system of registration and system of discovery for enterprise data sources. It lets users—from analysts to data scientists to developers—register, discover, understand, and consume data sources. Use crowdsourced annotations and metadata to capture tribal knowledge within your organization, shine light on hidden data, and get more value from your enterprise data sources." },
-				new ServiceItem { Id = Guid.Parse("cc05695c-f2e9-4261-b1ff-fc68e512eaf7").ToString(), Name = "Data Factory", Image="data-factory", Description = "Azure Data Factory is a managed service that lets you produce trusted information from raw data in cloud or on-premises sources. Easily create, orchestrate, and schedule highly-available, fault-tolerant work flows of data movement and transformation activities. Monitor service health and all of your data pipelines at a glance with a rich visual experience offered through the Azure portal." },
-				new ServiceItem { Id = Guid.Parse("027d708f-8d9e-4bff-ac83-49874374d184").ToString(), Name = "Data Lake Analytics", Image="data-lake", Description = "The Data Lake analytics service is a new distributed analytics service built on Apache YARN that dynamically scales so you can focus on your business goals, not on distributed infrastructure. Instead of deploying, configuring and tuning hardware, you write queries to transform your data and extract valuable insights. The analytics service can handle jobs of any scale instantly by simply setting the dial for how much power you need. You only pay for your job when it is running making it cost-effective. The analytics service supports Azure Active Directory letting you simply manage access and roles, integrated with your on-premises identity system. It also includes U-SQL, a language that unifies the benefits of SQL with the expressive power of user code. U-SQL’s scalable distributed runtime enables you to efficiently analyze data in the store and across SQL Servers in Azure, Azure SQL Database and Azure SQL Data Warehouse." },
-				new ServiceItem { Id = Guid.Parse("2b3c6ba6-da76-46c9-97cd-e6150f29f037").ToString(), Name = "Data Lake Store", Image="data-lake", Description = "The Data Lake store provides a single repository where you can capture data of any size type and speed simply without forcing changes to your application as the data scales. In the store, data can be shared for collaboration with enterprise-grade security. It is also designed for high-performance processing and analytics from HDFS applications (ie. Azure HDInsight, Data Lake analytics service, Hortonworks, Cloudera, MapR) and tools, including support for low latency workloads. For example, data can be ingested in real-time from sensors and devices for IoT solutions, or from online shopping websites into the store without the restriction of fixed limits on account or file size unlike current offerings in the market." },
-				new ServiceItem { Id = Guid.Parse("daf5a3f9-a99f-4e44-b547-043fbd770bc5").ToString(), Name = "DNS", Image="azure", Description = "Azure DNS lets you host your DNS domains alongside your Azure apps and manage DNS records by using your existing Azure subscription. Microsoft’s global network of name servers has the reach, scale, and redundancy to ensure ultra-fast DNS responses and ultra-high availability for your domains. With Azure DNS, you can be sure your DNS will always be fast and available." },
-				new ServiceItem { Id = Guid.Parse("4c8ca01c-935c-4190-91e8-cbc951e6a91c").ToString(), Name = "DocumentDB", Image="documentdb", Description = "Azure DocumentDB is a fully-managed NoSQL document database service that offers querying and transaction-processing over schema-free data, predictable and reliable performance, and rapid development." },
-				new ServiceItem { Id = Guid.Parse("84998d2d-7ffc-4aa5-9dd5-7f786c76969c").ToString(), Name = "Event Hubs",  Image="event-hubs", Description = "Azure Event Hubs enables elastic-scale telemetry and event ingestion with durable buffering and sub-second end-to-end latency for millions of devices and events." },
-				new ServiceItem { Id = Guid.Parse("f78cf83c-b95a-4a20-9db8-91015a4ffd37").ToString(), Name = "ExpressRoute", Image="expressroute", Description = "Azure ExpressRoute lets you create private connections between Azure datacenters and infrastructure that’s on your premises or in a colocation environment." },
-				new ServiceItem { Id = Guid.Parse("11204420-9fd8-4357-a457-653f3e190510").ToString(), Name = "HDInsight", Image="hdinsight", Description = "Azure HDInsight is a Hadoop-based service that brings an Apache Hadoop solution to the cloud. Gain the full value of big data with a cloud-based data platform that manages data of any type and size." },
-				new ServiceItem { Id = Guid.Parse("7914eefe-671a-4fdd-9070-fb3a54fd04f6").ToString(), Name = "IoT Hub",  Image="iot-hub", Description = "Jumpstart your Internet of Things project with Microsoft Azure IoT Hub. Connect, monitor, and control millions of IoT assets running on a broad set of operating systems and protocols. Establish reliable, bi-directional communication with these assets, even if they’re intermittently connected, and analyze—and act on—incoming telemetry data. Enhance the security of your IoT solutions by using per-device authentication to communicate with devices that have the appropriate credentials. Revoke access rights to specific devices to maintain the integrity of your system." },
-				new ServiceItem { Id = Guid.Parse("2eb0b4fe-c869-46b6-8e6e-220cdc3ead19").ToString(), Name = "Key Vault", Image="key-vault", Description = "Azure Key Vault offers an easy, cost-effective way to safeguard keys and other secrets in the cloud by using hardware security modules (HSMs). Protect cryptographic keys and small secrets like passwords with keys stored in HSMs. For added assurance, import or generate your keys in HSMs that are certified to FIPS 140-2 level 2 and Common Criteria EAL4+ standards, so that your keys stay within the HSM boundary. Key Vault is designed so that Microsoft does not see or extract your keys. Create new keys for Dev-Test in minutes and migrate seamlessly to production keys managed by security operations. Key Vault scales to meet the demands of your cloud applications without the hassle required to provision, deploy, and manage HSMs and key management software." },
-				new ServiceItem { Id = Guid.Parse("7e4a42e7-6cbc-4fb8-8950-4ddf76855a1a").ToString(), Name = "Load Balancer", Image="load-balancer", Description = "Azure Load Balancer distributes Internet and private network traffic among healthy service instances in cloud services or virtual machines. It lets you achieve greater reliability and seamlessly add more capacity to your applications." },
-				new ServiceItem { Id = Guid.Parse("eea079b0-1c9e-448c-867f-c97c6efd79c0").ToString(), Name = "Machine Learning",  Image="machine-learning", Description = "Azure Machine Learning lets you easily design, test, operationalize, and manage predictive analytics solutions in the cloud." },
-				new ServiceItem { Id = Guid.Parse("5e735368-305d-4b80-9e35-c419edcfa438").ToString(), Name = "Managed Cache Service", Image="cache", Description = "Azure Managed Cache Service is a distributed, in-memory, scalable solution that lets you build highly scalable and responsive applications by providing super-fast access to data." },
-				new ServiceItem { Id = Guid.Parse("189bf25c-2ea6-48b7-a991-853238315cd8").ToString(), Name = "Media Services", Image="media-services", Description = "Azure Media Services offers cloud-based media solutions, including ingest, encoding, format conversion, content protection, and both on-demand and live-streaming capabilities." },
-				new ServiceItem { Id = Guid.Parse("c2620a98-6d4a-4085-939a-77c322e7efdd").ToString(), Name = "Mobile Engagement", Image="mobile-engagement", Description = "Azure Mobile Engagement lets you maximize mobile app usage and revenue. It's an SaaS-delivered, data-driven user-engagement platform that enables real-time, fine-grained user segmentation, app user analytics, and contextually-aware smart-push notifications and in-app messaging across all connected devices. It closes the marketing loop for app developers and marketers, letting them get directly in touch with all of their customers in a personal, contextually-aware, and non-intrusive way, and at the right time." },
-				new ServiceItem { Id = Guid.Parse("ea0d828e-c62f-44b0-a6b1-3aba4408cee3").ToString(), Name = "Mobile Services", Image="mobile-services", Description = "Azure Mobile Services is a scalable cloud backend for building Windows Store, Windows Phone, Apple iOS, Android, and HTML/JavaScript applications. Store data in the cloud, authenticate users, and send push notifications to your application within minutes." },
-				new ServiceItem { Id = Guid.Parse("8b641241-2591-49d4-8a11-ee55bdf5c03a").ToString(), Name = "Multi-Factor Authentication", Image="multi-factor-authentication", Description = "Azure Multi-Factor Authentication helps prevent unauthorized access to on-premises and cloud applications by providing an additional layer of authentication. Follow organizational security and compliance standards while also addressing user demand for convenient access." },
-				new ServiceItem { Id = Guid.Parse("e19c762d-dff1-41d2-983b-a9f28f559eb2").ToString(), Name = "Notification Hubs", Image="notification-bus", Description = "Azure Notification Hubs is a highly scalable, cross-platform push notification infrastructure that lets you either broadcast push notifications to millions of users at once or tailor notifications to individual users." },
-				new ServiceItem { Id = Guid.Parse("185cad62-dd38-49fd-93f1-1819e8ee8649").ToString(), Name = "Operational Insights", Image="operational-insights", Description = "Azure Operational Insights lets you collect, correlate and visualize all your machine data, such as event logs, network logs, performance data, and much more, from both your on-premises and cloud assets." },
-				new ServiceItem { Id = Guid.Parse("a7850773-f4a3-4416-85b3-3a87b061e423").ToString(), Name = "Redis Cache", Image="redis-cache", Description = "Azure Redis Cache—based on the popular open source Redis cache—gives you access to a secure, dedicated cache for your Azure applications." },
-				new ServiceItem { Id = Guid.Parse("fc14d556-2292-4b82-9fe8-b47f047d4cda").ToString(), Name = "RemoteApp", Image="remoteapp", Description = "Azure RemoteApp helps employees stay productive anywhere, on a variety of devices—Windows, Mac OS X, iOS, or Android." },
-				new ServiceItem { Id = Guid.Parse("95b6b401-3a13-4d19-95a5-5cd016667c81").ToString(), Name = "Scheduler", Image="scheduler", Description = "Azure Scheduler lets you invoke actions that call HTTP/S endpoints or post messages to a storage queue on any schedule. Create jobs that reliably call services either inside or outside of Azure and run those jobs right away, on a regular or irregular schedule, or at a future date." },
-				new ServiceItem { Id = Guid.Parse("47c83b72-109a-44c9-b9ee-b1d2d2e6dae4").ToString(), Name = "Search", Image="search", Description = "Azure Search is a fully-managed service for adding sophisticated search capabilities to web and mobile applications without the typical complexities of full-text search." },
-				new ServiceItem { Id = Guid.Parse("847cdef8-aa84-49da-ad12-2ef485a80322").ToString(), Name = "Service Bus", Image="service-bus", Description = "Azure Service Bus is a messaging infrastructure that sits between applications allowing them to exchange messages for improved scale and resiliency." },
-				new ServiceItem { Id = Guid.Parse("3048acc1-4bea-4d60-9213-56dcf6cc653f").ToString(), Name = "Service Fabric", Image="service-fabric", Description = "Service Fabric is a microservices platform used to build scalable, reliable, and easily managed applications for the cloud. Addressing the significant challenges in developing and managing cloud applications, Service Fabric allows developers and administrators to avoid solving complex infrastructure problems and focus instead on implementing mission-critical, demanding workloads." },
-				new ServiceItem { Id = Guid.Parse("5eadf62b-d283-4b64-a66e-9763f6493fb9").ToString(), Name = "Site Recovery",  Image="site-recovery",Description = "Azure Site Recovery helps you protect important applications by coordinating the replication and recovery of private clouds for simple, cost-effective disaster recovery." },
-				new ServiceItem { Id = Guid.Parse("70692235-1ba1-4fd5-94ab-8a13e2cbd581").ToString(), Name = "SQL Database",  Image="sql-database", Description = "Azure SQL Database is a relational database service that lets you rapidly create, extend, and scale relational applications into the cloud." },
-				new ServiceItem { Id = Guid.Parse("24dcde38-d309-4472-8c1f-5c6f97033875").ToString(), Name = "SQL Data Warehouse", Image="azure", Description = "Azure SQL Data Warehouse is an elastic data warehouse as a service with enterprise-grade features based on the massively parallel SQL Server processing architecture. It lets you scale data, either on-premises or in our cloud. It’s the first cloud data warehouse that can dynamically grow or shrink, so you pay only for the query performance that you need, when you need it, up to petabyte-scale. SQL Data Warehouse lets you use your existing Transact-SQL (T-SQL) skills to integrate queries across structured and unstructured data. SQL Data Warehouse integrates with our data platform tools, including Azure HDInsight, Machine Learning, and Data Factory and Microsoft Power BI for a complete data-warehousing and business-intelligence solution in the cloud. With SQL Data Warehouse, you choose where to keep your data, either in the cloud or on-premises, based on your performance, security, and scale requirements." },
-				new ServiceItem { Id = Guid.Parse("6faf3370-335e-46fc-b65a-ec27d5917c68").ToString(), Name = "Storage", Image="storage", Description = "Azure Storage offers non-relational data storage including Blob Storage, Table Storage, Queue Storage, and Files." },
-				new ServiceItem { Id = Guid.Parse("c94e3ff9-b591-4358-a32e-e82ebd4e3efc").ToString(), Name = "StorSimple",  Image="storsimple", Description = "Azure StorSimple is a unique hybrid cloud storage solution for primary storage, archiving, and disaster recovery. StorSimple optimizes total storage costs and data protection. Note that the StorSimple 8000 Series is licensed separately from Azure services." },
-				new ServiceItem { Id = Guid.Parse("7614ca60-1bcb-4c70-af25-c0e3a7682b9c").ToString(), Name = "Stream Analytics", Image="stream-analytics", Description = "Azure Stream Analytics is an event-processing engine that helps you gain insights from devices, sensors, cloud infrastructure, and existing data properties in real-time. It's integrated out of the box with Event Hubs, and the combined solution can both ingest millions of events and do analytics to help you better understand patterns, power a dashboard, detect anomalies, or kick off an action while data is being streamed in real time." },
-				new ServiceItem { Id = Guid.Parse("c64685eb-65ac-4503-a266-b8bc5e415ebc").ToString(), Name = "Traffic Manager", Image="traffic-manager", Description = "Azure Traffic Manager lets you route incoming traffic across multiple hosted Azure services, whether they’re running in the same datacenter or in different datacenters around the world." },
-				new ServiceItem { Id = Guid.Parse("6d3469b5-2563-4616-acd7-fef3f9e11662").ToString(), Name = "Virtual Machines", Image="virtual-machines", Description = "Azure Virtual Machines lets you deploy a Windows Server or Linux image in the cloud. You can select images from a marketplace or use your own customized images." },
-				new ServiceItem { Id = Guid.Parse("f41d0abc-bd7f-4fb5-89b4-aa10f68c685d").ToString(), Name = "Virtual Network", Image="virtual-network",  Description = "Azure Virtual Network lets you create private networks in the cloud with full control over IP addresses, DNS servers, security rules, and traffic flows. Securely connect a virtual network to on-premises networks by using a VPN tunnel, or connect privately by using the ExpressRoute service." },
-				new ServiceItem { Id = Guid.Parse("9350dad4-9ae6-4a62-8f2f-b67ac9a449ad").ToString(), Name = "Visual Studio Team Services", Image="visual-studio-online", Description = "Visual Studio Team Services is a cloud-based application lifecycle management (ALM) solution for everything from hosted-code repositories and issue-tracking to load-testing and automated builds. It's accessible from nearly anywhere, and you can create an account for free. Visual Studio Team Services is licensed separately from Azure services." },
-				new ServiceItem { Id = Guid.Parse("3a3cfe6b-bebe-4129-8514-f64e900a2f43").ToString(), Name = "VPN Gateway", Image="vpn-gateway", Description = "Azure VPN Gateway lets you establish secure, cross-premises connections between your virtual network within Azure and on-premises IT infrastructure." },
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =1, AzureCategoryDescription ="Licensing", AzureCategoryStatus=true },
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =2, AzureCategoryDescription ="Administration", AzureCategoryStatus=true },
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =3, AzureCategoryDescription ="High Availability", AzureCategoryStatus=true },
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =4, AzureCategoryDescription ="Performance", AzureCategoryStatus=true },
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =5, AzureCategoryDescription ="Security", AzureCategoryStatus=true }
 			};
 
-			foreach (var service in services)
+			foreach (var category in categories)
+				context.Set<AzureCategory>().Add(category);
+
+			var serviceTypes = new List<AzureServiceType>
 			{
-				context.Set<ServiceItem>().Add(service);
-			}
+				new AzureServiceType{Id=Guid.NewGuid().ToString(), AzureServiceTypeId=1, AzureServiceTypeDescription="SaaS", AzureServiceTypeStatus=true },
+				new AzureServiceType{Id=Guid.NewGuid().ToString(), AzureServiceTypeId=2, AzureServiceTypeDescription="PaaS", AzureServiceTypeStatus=true},
+				new AzureServiceType{Id=Guid.NewGuid().ToString(), AzureServiceTypeId=3, AzureServiceTypeDescription="IaaS", AzureServiceTypeStatus=true,
+					AzureProducts = new List<AzureProduct>
+					{
+						new AzureProduct {Id = Guid.NewGuid().ToString(), AzureProductId = 1, AzureProductDescription = "SQL",  AzureProductIcon ="sql-database", AzureProductStatus = true },
+						new AzureProduct {Id = Guid.NewGuid().ToString(), AzureProductId = 2, AzureProductDescription = "Active Directory", AzureProductIcon="active-directory", AzureProductStatus = true },
+					}
+				}
+			};
+
+			foreach (var serviceType in serviceTypes)
+				context.Set<AzureServiceType>().Add(serviceType);
+
+			var productInformation = new AzureProductInformation
+			{
+				Id = Guid.NewGuid().ToString(),
+				AzureProductInformationId = 1,
+				AzureProductId = 1,
+				AzureCategoryId = 4,
+				AzureProductInformationDescription = "Create multiple files for tempdb on temporary drive (D) when using series D and G",
+				InformationDate = DateTime.Now,
+				AzureProductInformationStatus = true
+			};
+
+			context.Set<AzureProductInformation>().Add(productInformation);
 
 			base.Seed(context);
 		}

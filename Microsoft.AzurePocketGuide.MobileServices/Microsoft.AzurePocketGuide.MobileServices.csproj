@@ -53,11 +53,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -217,8 +217,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ServiceItemController.cs" />
-    <Compile Include="DataObjects\ServiceItem.cs" />
+    <Compile Include="Controllers\ServiceTypeController.cs" />
+    <Compile Include="Controllers\ProductInformationController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="DataObjects\ServiceType.cs" />
+    <Compile Include="DataObjects\ProductInformation.cs" />
+    <Compile Include="DataObjects\Product.cs" />
+    <Compile Include="DataObjects\Category.cs" />
+    <Compile Include="Models\Configurations\AzureServiceTypeConfiguration.cs" />
+    <Compile Include="Models\Configurations\AzureProductInformationConfiguration.cs" />
+    <Compile Include="Models\Configurations\AzureProductConfiguration.cs" />
+    <Compile Include="Models\Configurations\AzureCategoryConfiguration.cs" />
+    <Compile Include="Models\Managers\ServiceTypeDomainManager.cs" />
+    <Compile Include="Models\Managers\ProductInformationDomainManager.cs" />
+    <Compile Include="Models\Managers\ProductDomainManager.cs" />
+    <Compile Include="Models\Managers\CategoryDomainManager.cs" />
+    <Compile Include="Models\AzureCategory.cs" />
+    <Compile Include="Models\AzureProduct.cs" />
+    <Compile Include="Models\AzureProductInformation.cs" />
+    <Compile Include="Models\AzureServiceType.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

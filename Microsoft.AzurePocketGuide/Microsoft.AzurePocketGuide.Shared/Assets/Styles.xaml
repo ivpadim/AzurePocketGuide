@@ -2,21 +2,27 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="using:Microsoft.AzurePocketGuide.Assets">
 
+    <SolidColorBrush Color="#FFFDB813" x:Key="AccentColor"/>
+    
     <ItemsPanelTemplate x:Key="TilePanelTemplate">
         <ItemsWrapGrid Orientation="Horizontal" />
     </ItemsPanelTemplate>
 
+    <DataTemplate x:Key="PivotHeaderTemplate">
+        <TextBlock Text="{Binding Description}" />
+    </DataTemplate>
+
     <DataTemplate x:Key="TileItemTemplate">
-        <Border Background="#FFFDB813"
+        <Border Background="{StaticResource AccentColor}"
                 Height="100"
                 Width="110"
                 Margin="6,12,6,0">
             <Grid>
-                <ContentControl ContentTemplate="{Binding Image, Converter={StaticResource IconConverter}}"
+                <ContentControl ContentTemplate="{Binding Icon, Converter={StaticResource IconConverter}}"
                                 Margin="15"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Top" />
-                <TextBlock Text="{Binding Name}"
+                <TextBlock Text="{Binding Description}"
                            FontSize="13"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Bottom"
@@ -34,15 +40,15 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <Border Background="#FFFDB813"
+            <Border Background="{StaticResource AccentColor}"
                     Height="50"
                     Width="50"
                     Margin="5">
-                <ContentControl ContentTemplate="{Binding Image, Converter={StaticResource IconConverter}}"
+                <ContentControl ContentTemplate="{Binding Icon, Converter={StaticResource IconConverter}}"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center" />
             </Border>
-            <TextBlock Text="{Binding Name}"
+            <TextBlock Text="{Binding Description}"
                        Grid.Column="1"
                        FontSize="18"
                        HorizontalAlignment="Left"

@@ -16,9 +16,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Converters\IconConverter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Product.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Category.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ProductInformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IServicesRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ServicesRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ServiceDetailPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ServicesPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPage.cs" />
   </ItemGroup>
