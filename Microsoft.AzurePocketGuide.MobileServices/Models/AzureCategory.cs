@@ -10,6 +10,7 @@ namespace Microsoft.AzurePocketGuide.MobileServices.Models
 		[Key]
 		public int AzureCategoryId { get; set; }
 		public string AzureCategoryDescription { get; set; }
+		public string AzureCategoryIcon { get; set; }
 		public bool AzureCategoryStatus { get; set; }
 
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]

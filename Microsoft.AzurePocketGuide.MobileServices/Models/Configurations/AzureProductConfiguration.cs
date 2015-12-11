@@ -18,7 +18,7 @@ namespace Microsoft.AzurePocketGuide.MobileServices.Models.Configurations
 			Property(x => x.AzureProductId).HasColumnName("product_id").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 			Property(x => x.AzureServiceTypeId).HasColumnName("azureservice_type_id").IsOptional();
 			Property(x => x.AzureProductDescription).HasColumnName("product_description").IsRequired().HasMaxLength(50);
-			Property(x => x.AzureProductIcon).HasColumnName("product_icon").IsRequired().HasMaxLength(400);
+			Property(x => x.AzureProductIcon).HasColumnName("product_icon").HasMaxLength(400);
 			Property(x => x.AzureProductStatus).HasColumnName("product_status").IsRequired();
 
 			// Foreign keys

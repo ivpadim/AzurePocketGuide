@@ -1,0 +1,34 @@
+﻿<ViewModels:ServiceDetailPageViewModel xmlns:ViewModels="using:Microsoft.AzurePocketGuide.ViewModels" xmlns:Models="using:Microsoft.AzurePocketGuide.Models">
+	<ViewModels:ServiceDetailPageViewModel.SelectedItem>
+		<Models:Product Description="sql"
+                        Icon="icon-sql-database" Id="Class maecenas cras" ProductId="39" ServiceTypeId="15" Status="True" Version="Sed nibh nisi dis est">
+			<Models:Product.Information>
+				<Models:ProductInformation CategoryId="72" Description="Nam phasellus aptent consequat" Id="Quisque mauris nullam curae" IsNew="False" IsPreview="True" ProductId="29" ProductInformationId="79" ProductInformationDate="12/11/2015 13:15:58" Status="False" Version="Diam fusce eleifend sed">
+					<Models:ProductInformation.Category>
+						<Models:Category CategoryId="1" Description="Licensing" Icon="icon-licensing" Id="Duis nunc convallis dignissim elementum" Status="True" Version="Etiam arcu congue"/>
+					</Models:ProductInformation.Category>
+				</Models:ProductInformation>
+				<Models:ProductInformation CategoryId="29" Description="Fermentum dictum vivamus" Id="Cursus eget dis" IsNew="False" IsPreview="True" ProductId="79" ProductInformationId="72" ProductInformationDate="12/11/2015 13:15:58" Status="False" Version="Aliquet erat ligula lobortis vestibulum">
+					<Models:ProductInformation.Category>
+						<Models:Category CategoryId="2" Description="Administration" Icon="icon-administration" Id="Parturient lectus libero" Status="True" Version="Inceptos aliquam interdum"/>
+					</Models:ProductInformation.Category>
+				</Models:ProductInformation>
+				<Models:ProductInformation CategoryId="92" Description="Habitasse hac" Id="Adipiscing est" IsNew="False" IsPreview="True" ProductId="92" ProductInformationId="97" ProductInformationDate="12/11/2015 13:15:58" Status="False" Version="Commodo luctus senectus conubia">
+					<Models:ProductInformation.Category>
+						<Models:Category CategoryId="3" Description="High Availability" Icon="icon-high-availability" Id="Lorem hendrerit himenaeos blandit nascetur" Status="True" Version="Vestibulum adipiscing parturient eros vestibulum"/>
+					</Models:ProductInformation.Category>
+				</Models:ProductInformation>
+				<Models:ProductInformation CategoryId="94" Description="Mus cubilia" Id="Sociosqu nibh malesuada" IsNew="False" IsPreview="True" ProductId="25" ProductInformationId="52" ProductInformationDate="12/11/2015 13:15:58" Status="False" Version="Torquent proin odio tristique">
+					<Models:ProductInformation.Category>
+						<Models:Category CategoryId="4" Description="Performance" Icon="icon-performance" Id="Nec penatibus" Status="True" Version="Non tincidunt per"/>
+					</Models:ProductInformation.Category>
+				</Models:ProductInformation>
+				<Models:ProductInformation CategoryId="62" Description="Sed sem" Id="Augue ultrices vehicula" IsNew="False" IsPreview="True" ProductId="98" ProductInformationId="16" ProductInformationDate="12/11/2015 13:15:58" Status="False" Version="Orci vestibulum">
+					<Models:ProductInformation.Category>
+						<Models:Category CategoryId="36" Description="Security" Icon="icon-security" Id="Vestibulum adipiscing egestas" Status="True" Version="Ultricies volutpat mollis euismod"/>
+					</Models:ProductInformation.Category>
+				</Models:ProductInformation>
+			</Models:Product.Information>
+		</Models:Product>
+	</ViewModels:ServiceDetailPageViewModel.SelectedItem>
+</ViewModels:ServiceDetailPageViewModel>

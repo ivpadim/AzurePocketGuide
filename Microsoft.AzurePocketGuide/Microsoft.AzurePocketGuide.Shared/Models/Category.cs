@@ -24,6 +24,11 @@ namespace Microsoft.AzurePocketGuide.Models
 		public string Description { get; set; }
 
 		/// <summary>
+		/// Icon of the Category
+		/// </summary>
+		public string Icon { get; set; }
+
+		/// <summary>
 		/// Status of the record
 		/// </summary>
 		public bool Status { get; set; }

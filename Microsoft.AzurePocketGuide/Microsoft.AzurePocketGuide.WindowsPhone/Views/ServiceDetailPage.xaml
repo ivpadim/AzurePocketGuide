@@ -17,18 +17,16 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <StackPanel Margin="20,12,0,10">
+        <StackPanel Margin="20,12,0,20">
             <TextBlock Text="azure pocket guide"
                        Style="{StaticResource TitleTextBlockStyle}" />
             <TextBlock Text="{Binding SelectedItem.Description}"
-                       Style="{StaticResource HeaderTextBlockStyle}" />
+                       Style="{StaticResource HeaderTextBlockStyle}"
+                       Margin="0,-7,0,0"/>
         </StackPanel>
 
-
-        <TextBlock Text="{Binding SelectedItem.Description}"
-                   TextWrapping="Wrap"
-                   Grid.Row="1"
-                   Margin="11,0,0,0"
-                   Style="{StaticResource BodyTextBlockStyle}" />
+        <ListView ItemsSource="{Binding SelectedItem.Information}"
+                  ItemTemplate="{StaticResource InformationListItemTemplate}"
+                  Grid.Row="1"/>
     </Grid>
 </prism:VisualStateAwarePage>

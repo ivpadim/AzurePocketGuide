@@ -17,6 +17,7 @@ namespace Microsoft.AzurePocketGuide.MobileServices.Models.Configurations
 
 			Property(x => x.AzureCategoryId).HasColumnName("azurecategory_id").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 			Property(x => x.AzureCategoryDescription).HasColumnName("azurecategory_description").IsRequired().HasMaxLength(100);
+			Property(x => x.AzureCategoryIcon).HasColumnName("azurecategory_icon").HasMaxLength(400);
 			Property(x => x.AzureCategoryStatus).HasColumnName("azurecategory_status").IsRequired();
 		}
 	}

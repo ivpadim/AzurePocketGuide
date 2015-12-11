@@ -2,8 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="using:Microsoft.AzurePocketGuide.Assets">
 
-    <SolidColorBrush Color="#FFFDB813" x:Key="AccentColor"/>
-    
+    <SolidColorBrush Color="#FFFDB813"
+                     x:Key="AccentColor" />
+
     <ItemsPanelTemplate x:Key="TilePanelTemplate">
         <ItemsWrapGrid Orientation="Horizontal" />
     </ItemsPanelTemplate>
@@ -18,7 +19,8 @@
                 Width="110"
                 Margin="6,12,6,0">
             <Grid>
-                <ContentControl ContentTemplate="{Binding Icon, Converter={StaticResource IconConverter}}"
+                <ContentControl Template="{Binding Icon, Converter={StaticResource IconConverter}}"
+                                Background="White"
                                 Margin="15"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Top" />
@@ -39,12 +41,12 @@
                 <ColumnDefinition Width="80" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-
             <Border Background="{StaticResource AccentColor}"
                     Height="50"
                     Width="50"
                     Margin="5">
-                <ContentControl ContentTemplate="{Binding Icon, Converter={StaticResource IconConverter}}"
+                <ContentControl Template="{Binding Icon, Converter={StaticResource IconConverter}}"
+                                Background="White"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center" />
             </Border>
@@ -55,6 +57,12 @@
                        VerticalAlignment="Center"
                        TextWrapping="Wrap" />
         </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="InformationListItemTemplate">
+        <ContentControl Content="{Binding Category}"
+                        ContentTemplate="{StaticResource IconListItemTemplate}"
+                        Background="White" />
     </DataTemplate>
 
 </ResourceDictionary>

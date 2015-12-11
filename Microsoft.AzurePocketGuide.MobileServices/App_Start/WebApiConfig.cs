@@ -24,6 +24,7 @@ namespace Microsoft.AzurePocketGuide.MobileServices
 				cfg.CreateMap<AzureCategory, Category>()
 						.ForMember(dest => dest.CategoryId, map => map.MapFrom(x => x.AzureCategoryId))
 						.ForMember(dest => dest.Description, map => map.MapFrom(x => x.AzureCategoryDescription))
+						.ForMember(dest => dest.Icon, map => map.MapFrom(x => x.AzureCategoryIcon))
 						.ForMember(dest => dest.Status, map => map.MapFrom(x => x.AzureCategoryStatus));
 
 				cfg.CreateMap<AzureServiceType, ServiceType>()
@@ -54,24 +55,24 @@ namespace Microsoft.AzurePocketGuide.MobileServices
 			// config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 
 			Database.SetInitializer(new MobileServiceInitializer());
-	
+
 		}
 	}
 
 	public class MobileServiceInitializer : DropCreateDatabaseIfModelChanges<MobileServiceContext>
 	{
-		
+
 		protected override void Seed(MobileServiceContext context)
 		{
 
 
 			var categories = new List<AzureCategory>
 			{
-				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =1, AzureCategoryDescription ="Licensing", AzureCategoryStatus=true },
-				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =2, AzureCategoryDescription ="Administration", AzureCategoryStatus=true },
-				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =3, AzureCategoryDescription ="High Availability", AzureCategoryStatus=true },
-				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =4, AzureCategoryDescription ="Performance", AzureCategoryStatus=true },
-				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =5, AzureCategoryDescription ="Security", AzureCategoryStatus=true }
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =1, AzureCategoryDescription ="Licensing", AzureCategoryIcon="icon-licensing", AzureCategoryStatus=true },
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =2, AzureCategoryDescription ="Administration", AzureCategoryIcon="icon-administration", AzureCategoryStatus=true },
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =3, AzureCategoryDescription ="High Availability", AzureCategoryIcon="icon-high-availability", AzureCategoryStatus=true },
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =4, AzureCategoryDescription ="Performance", AzureCategoryIcon="icon-performance",  AzureCategoryStatus=true },
+				new AzureCategory {Id = Guid.NewGuid().ToString(), AzureCategoryId =5, AzureCategoryDescription ="Security", AzureCategoryIcon="icon-security", AzureCategoryStatus=true }
 			};
 
 			foreach (var category in categories)
@@ -84,8 +85,8 @@ namespace Microsoft.AzurePocketGuide.MobileServices
 				new AzureServiceType{Id=Guid.NewGuid().ToString(), AzureServiceTypeId=3, AzureServiceTypeDescription="IaaS", AzureServiceTypeStatus=true,
 					AzureProducts = new List<AzureProduct>
 					{
-						new AzureProduct {Id = Guid.NewGuid().ToString(), AzureProductId = 1, AzureProductDescription = "SQL",  AzureProductIcon ="sql-database", AzureProductStatus = true },
-						new AzureProduct {Id = Guid.NewGuid().ToString(), AzureProductId = 2, AzureProductDescription = "Active Directory", AzureProductIcon="active-directory", AzureProductStatus = true },
+						new AzureProduct {Id = Guid.NewGuid().ToString(), AzureProductId = 1, AzureProductDescription = "SQL",  AzureProductIcon ="icon-sql-database", AzureProductStatus = true },
+						new AzureProduct {Id = Guid.NewGuid().ToString(), AzureProductId = 2, AzureProductDescription = "Active Directory", AzureProductIcon="icon-active-directory", AzureProductStatus = true },
 					}
 				}
 			};

@@ -12,9 +12,9 @@ namespace Microsoft.AzurePocketGuide.Converters
 		public object Convert(object value, Type targetType, object parameter, string language)
 		{
 			if (value == null)
-				return (DataTemplate)App.Current.Resources["azure"];
+				return App.Current.Resources["azure"];
 
-			return (DataTemplate)App.Current.Resources[value.ToString()];
+			return App.Current.Resources[value.ToString()];
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, string language)
