@@ -101,7 +101,8 @@ namespace Microsoft.AzurePocketGuide.ViewModels
 			set
 			{
 				SetProperty(ref _selectedItem, value);
-				_navigationService.Navigate("ServiceDetail", _selectedItem.ProductId);
+				if (_selectedItem != null)
+					_navigationService.Navigate("Product", _selectedItem.ProductId);
 			}
 		}
 

@@ -11,8 +11,10 @@
                             Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                             d:DataContext="{d:DesignData /SampleData/ServicesPageViewModelSampleData.xaml}">
     <Grid>
-        <Pivot ItemsSource="{Binding Items}"
+        <Pivot x:Name="pivot"
+               ItemsSource="{Binding Items}"
                Title="azure pocket guide"
+               SelectedIndex="0"
                CommonNavigationTransitionInfo.IsStaggerElement="True"
                HeaderTemplate="{StaticResource PivotHeaderTemplate}">
             <Pivot.ItemTemplate>

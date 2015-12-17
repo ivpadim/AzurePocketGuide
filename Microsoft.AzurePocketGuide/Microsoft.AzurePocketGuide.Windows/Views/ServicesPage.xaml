@@ -57,6 +57,7 @@
                        VerticalAlignment="Bottom"
                        Margin="0,0,30,40" />
         </Grid>
+        
         <ListView ItemsSource="{Binding Items}"
                   SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                   ItemTemplate="{StaticResource IconListItemTemplate}"

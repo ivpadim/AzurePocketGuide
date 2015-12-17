@@ -18,6 +18,9 @@
     <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+    <AppxPackageDir>C:\Users\v-ivpadr\Documents\Visual Studio 2015\Projects\AzurePocketGuide\AppPackages\</AppxPackageDir>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -89,8 +92,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\ServiceDetailPage.xaml.cs">
-      <DependentUpon>ServiceDetailPage.xaml</DependentUpon>
+    <Compile Include="Views\ProductInformationPage.xaml.cs">
+      <DependentUpon>ProductInformationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductPage.xaml.cs">
+      <DependentUpon>ProductPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ServicesPage.xaml.cs">
       <DependentUpon>ServicesPage.xaml</DependentUpon>
@@ -108,6 +114,7 @@
     <Content Include="Assets\SmallLogo.scale-240.png" />
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\WideLogo.scale-240.png" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -188,11 +195,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </DesignData>
-    <DesignData Include="SampleData\ServiceDetailPageViewModelSampleData.xaml">
+    <DesignData Include="SampleData\ProductPageViewModelSampleData.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </DesignData>
-    <Page Include="Views\ServiceDetailPage.xaml">
+    <DesignData Include="SampleData\ProductInformationPageViewModelSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignData>
+    <Page Include="Views\ProductInformationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ProductPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

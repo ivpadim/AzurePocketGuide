@@ -48,9 +48,8 @@ namespace Microsoft.AzurePocketGuide.Services
 				store.DefineTable<ServiceType>();
 				store.DefineTable<Product>();
 				store.DefineTable<ProductInformation>();
-				await _mobileService.SyncContext.InitializeAsync(store, null);
+				await _mobileService.SyncContext.InitializeAsync(store);
 			}
-			await SyncData();
 		}
 
 		/// <summary>
@@ -68,10 +67,15 @@ namespace Microsoft.AzurePocketGuide.Services
 		/// <returns></returns>
 		private async Task SyncData()
 		{
-			await _categoryTable.PullAsync("Category", _categoryTable.CreateQuery());
-			await _serviceTypeTable.PullAsync("ServiceType", _serviceTypeTable.CreateQuery());
-			await _productTable.PullAsync("Product", _productTable.CreateQuery());
-			await _productInfoTable.PullAsync("ProductInformation", _productInfoTable.CreateQuery());
+			await _categoryTable.PurgeAsync();
+			await _serviceTypeTable.PurgeAsync();
+			await _productTable.PurgeAsync();
+			await _productInfoTable.PurgeAsync();
+
+			await _categoryTable.PullAsync(null, _categoryTable.CreateQuery());
+			await _serviceTypeTable.PullAsync(null, _serviceTypeTable.CreateQuery());
+			await _productTable.PullAsync(null, _productTable.CreateQuery());
+			await _productInfoTable.PullAsync(null, _productInfoTable.CreateQuery());
 		}
 
 		#endregion
@@ -150,13 +154,48 @@ namespace Microsoft.AzurePocketGuide.Services
 						.ToCollectionAsync())
 						.FirstOrDefault();
 
+				product.ServiceType = (await _serviceTypeTable
+						.Where(s => s.ServiceTypeId == product.ServiceTypeId)
+						.ToCollectionAsync())
+						.FirstOrDefault();
+
 				foreach (var productInfo in productInformations)
+				{
 					productInfo.Category = categories.FirstOrDefault(c => c.CategoryId == productInfo.CategoryId);
+					productInfo.Product = product;
+				}
 
 				product.Information = productInformations;
 
 				return product;
 
+			}
+			catch (MobileServiceInvalidOperationException e)
+			{
+				throw e;
+			}
+		}
+
+		public async Task<ProductInformation> GetProductInformationById(int productInfoId)
+		{
+			try
+			{
+				var productInfo = (await _productInfoTable
+						.Where(p => p.ProductInformationId == productInfoId)
+						.ToCollectionAsync())
+						.FirstOrDefault();
+
+				productInfo.Product = (await _productTable
+						.Where(p => p.ProductId == productInfo.ProductId)
+						.ToCollectionAsync())
+						.FirstOrDefault();
+
+				productInfo.Category = (await _categoryTable
+						.Where(c => c.CategoryId == productInfo.CategoryId)
+						.ToCollectionAsync())
+						.FirstOrDefault();
+
+				return productInfo;
 			}
 			catch (MobileServiceInvalidOperationException e)
 			{

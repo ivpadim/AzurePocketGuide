@@ -1,7 +1,14 @@
-﻿<ViewModels:ServiceDetailPageViewModel xmlns:ViewModels="using:Microsoft.AzurePocketGuide.ViewModels" xmlns:Models="using:Microsoft.AzurePocketGuide.Models">
-	<ViewModels:ServiceDetailPageViewModel.SelectedItem>
-		<Models:Product Description="sql"
+﻿<ViewModels:ProductPageViewModel xmlns:ViewModels="using:Microsoft.AzurePocketGuide.ViewModels" xmlns:Models="using:Microsoft.AzurePocketGuide.Models">
+	<ViewModels:ProductPageViewModel.Item>
+		<Models:Product Description="sharepoint"
                         Icon="icon-sql-database" Id="Class maecenas cras" ProductId="39" ServiceTypeId="15" Status="True" Version="Sed nibh nisi dis est">
+            <Models:Product.ServiceType>
+                <Models:ServiceType Description="infrastructure"
+                                    Id="Vestibulum class"
+                                    ServiceTypeId="1"
+                                    Status="True"
+                                    Version="Vel nam nibh litora"/>
+            </Models:Product.ServiceType>
 			<Models:Product.Information>
 				<Models:ProductInformation CategoryId="72" Description="Nam phasellus aptent consequat" Id="Quisque mauris nullam curae" IsNew="False" IsPreview="True" ProductId="29" ProductInformationId="79" ProductInformationDate="12/11/2015 13:15:58" Status="False" Version="Diam fusce eleifend sed">
 					<Models:ProductInformation.Category>
@@ -29,6 +36,38 @@
 					</Models:ProductInformation.Category>
 				</Models:ProductInformation>
 			</Models:Product.Information>
+            <Models:Product.AvailableCategories>
+                    <Models:Category CategoryId="1"
+                                     Description="Licensing"
+                                     Icon="icon-licensing"
+                                     Id="Duis nunc convallis dignissim elementum"
+                                     Status="True"
+                                     Version="Etiam arcu congue" />
+                <Models:Category CategoryId="2"
+                                 Description="Administration"
+                                 Icon="icon-administration"
+                                 Id="Parturient lectus libero"
+                                 Status="True"
+                                 Version="Inceptos aliquam interdum" />
+                <Models:Category CategoryId="3"
+                                 Description="High Availability"
+                                 Icon="icon-high-availability"
+                                 Id="Lorem hendrerit himenaeos blandit nascetur"
+                                 Status="True"
+                                 Version="Vestibulum adipiscing parturient eros vestibulum" />
+                <Models:Category CategoryId="4"
+                                 Description="Performance"
+                                 Icon="icon-performance"
+                                 Id="Nec penatibus"
+                                 Status="True"
+                                 Version="Non tincidunt per" />
+                <Models:Category CategoryId="5"
+                                 Description="Security"
+                                 Icon="icon-security"
+                                 Id="Vestibulum adipiscing egestas"
+                                 Status="True"
+                                 Version="Ultricies volutpat mollis euismod" />
+            </Models:Product.AvailableCategories>
 		</Models:Product>
-	</ViewModels:ServiceDetailPageViewModel.SelectedItem>
-</ViewModels:ServiceDetailPageViewModel>
+	</ViewModels:ProductPageViewModel.Item>
+</ViewModels:ProductPageViewModel>

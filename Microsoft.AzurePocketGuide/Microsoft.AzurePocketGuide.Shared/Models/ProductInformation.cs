@@ -27,6 +27,9 @@ namespace Microsoft.AzurePocketGuide.Models
 		[JsonIgnore]
 		public Category Category { get; set; }
 
+		[JsonIgnore]
+		public Product Product { get; set; }
+
 		[Version]
 		public string Version { get; set; }
 	}

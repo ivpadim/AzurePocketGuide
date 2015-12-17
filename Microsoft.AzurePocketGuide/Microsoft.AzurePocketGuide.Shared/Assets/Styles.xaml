@@ -10,7 +10,7 @@
     </ItemsPanelTemplate>
 
     <DataTemplate x:Key="PivotHeaderTemplate">
-        <TextBlock Text="{Binding Description}" />
+        <TextBlock Text="{Binding Description, Converter={StaticResource LowerCaseConverter}}" />
     </DataTemplate>
 
     <DataTemplate x:Key="TileItemTemplate">
@@ -61,8 +61,7 @@
 
     <DataTemplate x:Key="InformationListItemTemplate">
         <ContentControl Content="{Binding Category}"
-                        ContentTemplate="{StaticResource IconListItemTemplate}"
-                        Background="White" />
+                        ContentTemplate="{StaticResource IconListItemTemplate}" />
     </DataTemplate>
 
 </ResourceDictionary>

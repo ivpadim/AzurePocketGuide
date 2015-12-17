@@ -22,5 +22,12 @@ namespace Microsoft.AzurePocketGuide.Services
 		/// <param name="productId">Id of the product to retrieve</param>
 		/// <returns>Product</returns>
 		Task<Product> GetProductById(int productId);
-	}
+
+		/// <summary>
+		///  Gets the product information
+		/// </summary>
+		/// <param name="productInfoId">Id of the product info to retrieve</param>
+		/// <returns>Product Information</returns>
+		Task<ProductInformation> GetProductInformationById(int productInfoId);
+    }
 }

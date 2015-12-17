@@ -1,0 +1,845 @@
+﻿<ViewModels:ProductInformationPageViewModel xmlns:ViewModels="using:Microsoft.AzurePocketGuide.ViewModels"
+                                            xmlns:Models="using:Microsoft.AzurePocketGuide.Models">
+    <ViewModels:ProductInformationPageViewModel.Items>
+        <Models:ProductInformation CategoryId="38"
+                                   Description="Nam aenean aliquam maecenas integer praesent class quisque accumsan sed"
+                                   Id="Nam maecenas aliquam"
+                                   IsNew="True"
+                                   IsPreview="False"
+                                   ProductId="91"
+                                   ProductInformationId="82"
+                                   ProductInformationDate="12/16/2015 19:33:55"
+                                   Status="True"
+                                   Version="Justo ornare laoreet imperdiet platea">
+            <Models:ProductInformation.Category>
+                <Models:Category CategoryId="82"
+                                 Description="Licensing"
+                                 Icon="Dis integer est"
+                                 Id="Class praesent"
+                                 Status="False"
+                                 Version="Vestibulum hac leo" />
+            </Models:ProductInformation.Category>
+            <Models:ProductInformation.Product>
+                <Models:Product Description="SharePoint"
+                                Icon="Amet parturient"
+                                Id="Curae duis curabitur adipiscing accumsan"
+                                ProductId="88"
+                                ServiceTypeId="55"
+                                Status="True"
+                                Version="Ipsum nostra">
+                    <Models:Product.AvailableCategories>
+                        <Models:Category CategoryId="19"
+                                         Description="Vestibulum libero"
+                                         Icon="Facilisis ligula vestibulum lobortis"
+                                         Id="Nunc interdum"
+                                         Status="False"
+                                         Version="Cubilia augue dolor" />
+                        <Models:Category CategoryId="82"
+                                         Description="Adipiscing pharetra"
+                                         Icon="Nam dapibus"
+                                         Id="Sit nascetur vel"
+                                         Status="True"
+                                         Version="Litora placerat sed egestas euismod" />
+                        <Models:Category CategoryId="46"
+                                         Description="Senectus odio vestibulum luctus"
+                                         Icon="Est feugiat sociosqu gravida orci"
+                                         Id="Dis fames pulvinar parturient sagittis"
+                                         Status="False"
+                                         Version="Fermentum pede fringilla vestibulum" />
+                        <Models:Category CategoryId="45"
+                                         Description="Parturient hendrerit"
+                                         Icon="Suscipit magnis lacinia"
+                                         Id="Iaculis hac habitasse adipiscing felis"
+                                         Status="True"
+                                         Version="Leo himenaeos" />
+                        <Models:Category CategoryId="28"
+                                         Description="Quam non mattis quis"
+                                         Icon="Per mauris mollis adipiscing parturient"
+                                         Id="Mus vestibulum torquent nec vestibulum"
+                                         Status="False"
+                                         Version="Sed montes" />
+                    </Models:Product.AvailableCategories>
+                    <Models:Product.Information>
+                        <Models:ProductInformation CategoryId="97"
+                                                   Description="Cras mauris dis est nullam hac duis curae"
+                                                   Id="Cursus vestibulum per"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="92"
+                                                   ProductInformationId="57"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Dictum vivamus bibendum" />
+                        <Models:ProductInformation CategoryId="66"
+                                                   Description="Vivamus donec aptent auctor leo bibendum dictumst"
+                                                   Id="Dictumst lectus eget eleifend"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="94"
+                                                   ProductInformationId="68"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Phasellus elit consequat" />
+                        <Models:ProductInformation CategoryId="10"
+                                                   Description="Mus nec non congue cursus aliquam etiam eleifend facilisi"
+                                                   Id="Convallis aliquet"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="62"
+                                                   ProductInformationId="49"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Parturient enim erat" />
+                        <Models:ProductInformation CategoryId="97"
+                                                   Description="Aliquet faucibus dictum nunc per amet lectus libero fusce sed"
+                                                   Id="Lorem vestibulum morbi vestibulum nulla"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="77"
+                                                   ProductInformationId="13"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Proin commodo" />
+                        <Models:ProductInformation CategoryId="66"
+                                                   Description="Lorem morbi blandit ante habitant sem inceptos"
+                                                   Id="Adipiscing conubia nisi habitant"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="27"
+                                                   ProductInformationId="91"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Elementum parturient" />
+                    </Models:Product.Information>
+                    <Models:Product.ServiceType>
+                        <Models:ServiceType Description="Congue ante nec"
+                                            Id="Nullam aptent auctor"
+                                            ServiceTypeId="47"
+                                            Status="False"
+                                            Version="Non donec arcu quisque" />
+                    </Models:Product.ServiceType>
+                </Models:Product>
+            </Models:ProductInformation.Product>
+        </Models:ProductInformation>
+        <Models:ProductInformation CategoryId="76"
+                                   Description="Ligula commodo interdum arcu litora luctus lobortis nascetur magnis"
+                                   Id="Primis malesuada urna vestibulum"
+                                   IsNew="True"
+                                   IsPreview="False"
+                                   ProductId="82"
+                                   ProductInformationId="48"
+                                   ProductInformationDate="12/16/2015 19:33:55"
+                                   Status="True"
+                                   Version="Litora quis blandit dignissim">
+            <Models:ProductInformation.Category>
+                <Models:Category CategoryId="91"
+                                 Description="Sit volutpat"
+                                 Icon="Vestibulum rutrum lacus"
+                                 Id="Sem duis natoque penatibus vehicula"
+                                 Status="False"
+                                 Version="Maecenas vel" />
+            </Models:ProductInformation.Category>
+            <Models:ProductInformation.Product>
+                <Models:Product Description="Potenti magna nam massa adipiscing"
+                                Icon="Metus morbi sed neque pretium"
+                                Id="Lorem praesent posuere"
+                                ProductId="18"
+                                ServiceTypeId="63"
+                                Status="True"
+                                Version="Lectus libero ligula">
+                    <Models:Product.AvailableCategories>
+                        <Models:Category CategoryId="60"
+                                         Description="Placerat pulvinar aliquam"
+                                         Icon="Turpis sagittis senectus"
+                                         Id="Viverra donec adipiscing pharetra"
+                                         Status="False"
+                                         Version="Varius curabitur leo mus" />
+                        <Models:Category CategoryId="98"
+                                         Description="Suscipit etiam torquent fusce aenean"
+                                         Icon="Nec lorem"
+                                         Id="Sociosqu phasellus"
+                                         Status="True"
+                                         Version="Consequat mauris nisi" />
+                        <Models:Category CategoryId="41"
+                                         Description="Nisl integer vestibulum"
+                                         Icon="Nullam ultrices"
+                                         Id="Non parturient morbi"
+                                         Status="False"
+                                         Version="Vehicula aptent nunc convallis" />
+                        <Models:Category CategoryId="55"
+                                         Description="Auctor per sed"
+                                         Icon="Adipiscing nulla parturient proin quisque"
+                                         Id="Volutpat vestibulum"
+                                         Status="True"
+                                         Version="Odio maecenas augue congue vivamus" />
+                        <Models:Category CategoryId="34"
+                                         Description="Sem orci dolor"
+                                         Icon="Aliquam bibendum aliquet"
+                                         Id="Praesent accumsan cursus"
+                                         Status="False"
+                                         Version="Pede dictum quam" />
+                    </Models:Product.AvailableCategories>
+                    <Models:Product.Information>
+                        <Models:ProductInformation CategoryId="81"
+                                                   Description="Pharetra diam eget elit enim conubia cubilia sit erat dapibus nulla"
+                                                   Id="Tincidunt parturient accumsan purus vestibulum"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="85"
+                                                   ProductInformationId="46"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Velit vitae dis" />
+                        <Models:ProductInformation CategoryId="29"
+                                                   Description="Vel proin augue placerat pulvinar eros sagittis mattis mauris"
+                                                   Id="Tristique adipiscing"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="60"
+                                                   ProductInformationId="18"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Rhoncus dictumst ultricies eleifend" />
+                        <Models:ProductInformation CategoryId="62"
+                                                   Description="Nibh egestas nisi dolor euismod nam feugiat senectus gravida nisl fames"
+                                                   Id="Elit enim"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="14"
+                                                   ProductInformationId="41"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Venenatis eros vulputate" />
+                        <Models:ProductInformation CategoryId="15"
+                                                   Description="Iaculis felis mollis ipsum nunc justo sed lacinia montes nostra laoreet"
+                                                   Id="Est tempor"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="29"
+                                                   ProductInformationId="73"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Faucibus habitant inceptos interdum" />
+                        <Models:ProductInformation CategoryId="85"
+                                                   Description="Sociosqu odio ornare suscipit orci lacus dis pede quam platea quis lorem"
+                                                   Id="Tempus lobortis"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="28"
+                                                   ProductInformationId="70"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Vestibulum nascetur curae vestibulum nibh" />
+                    </Models:Product.Information>
+                    <Models:Product.ServiceType>
+                        <Models:ServiceType Description="Netus porttitor nulla"
+                                            Id="Nunc amet sapien ante"
+                                            ServiceTypeId="27"
+                                            Status="False"
+                                            Version="Semper porta arcu" />
+                    </Models:Product.ServiceType>
+                </Models:Product>
+            </Models:ProductInformation.Product>
+        </Models:ProductInformation>
+        <Models:ProductInformation CategoryId="81"
+                                   Description="Urna est hac natoque primis leo mus torquent cras nec magna"
+                                   Id="Dictumst elementum facilisis fames sit"
+                                   IsNew="True"
+                                   IsPreview="False"
+                                   ProductId="26"
+                                   ProductInformationId="82"
+                                   ProductInformationDate="12/16/2015 19:33:55"
+                                   Status="True"
+                                   Version="Velit commodo adipiscing">
+            <Models:ProductInformation.Category>
+                <Models:Category CategoryId="56"
+                                 Description="Conubia vestibulum vel ipsum facilisi"
+                                 Icon="Vestibulum urna"
+                                 Id="Commodo eleifend"
+                                 Status="False"
+                                 Version="Mattis nam cubilia sed" />
+            </Models:ProductInformation.Category>
+            <Models:ProductInformation.Product>
+                <Models:Product Description="Faucibus fringilla mauris"
+                                Icon="Habitasse cras"
+                                Id="Justo adipiscing parturient dapibus"
+                                ProductId="45"
+                                ServiceTypeId="53"
+                                Status="True"
+                                Version="Tempus tortor nisl">
+                    <Models:Product.AvailableCategories>
+                        <Models:Category CategoryId="13"
+                                         Description="Torquent ultrices vehicula"
+                                         Icon="Arcu parturient"
+                                         Id="Tincidunt sed sem"
+                                         Status="False"
+                                         Version="Sit tristique sodales vel vestibulum" />
+                        <Models:Category CategoryId="45"
+                                         Description="Netus ultricies vestibulum viverra"
+                                         Icon="Adipiscing parturient"
+                                         Id="Rutrum diam eget volutpat elit"
+                                         Status="True"
+                                         Version="Nulla maecenas sapien aliquam" />
+                        <Models:Category CategoryId="62"
+                                         Description="Integer praesent sed"
+                                         Icon="Quisque porta"
+                                         Id="Nam semper enim erat"
+                                         Status="False"
+                                         Version="Vestibulum venenatis sociis vulputate taciti" />
+                        <Models:Category CategoryId="40"
+                                         Description="Purus vivamus adipiscing risus"
+                                         Icon="Tellus est"
+                                         Id="Vestibulum curabitur dis accumsan"
+                                         Status="True"
+                                         Version="Hac eros parturient" />
+                        <Models:Category CategoryId="75"
+                                         Description="Mus tempor"
+                                         Icon="Vestibulum nisi"
+                                         Id="Nibh leo"
+                                         Status="False"
+                                         Version="Aliquam vestibulum aliquet blandit" />
+                    </Models:Product.AvailableCategories>
+                    <Models:Product.Information>
+                        <Models:ProductInformation CategoryId="25"
+                                                   Description="Posuere rutrum potenti non sapien semper duis per ultrices vehicula"
+                                                   Id="Lorem habitant inceptos imperdiet"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="74"
+                                                   ProductInformationId="98"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Egestas euismod hac" />
+                        <Models:ProductInformation CategoryId="40"
+                                                   Description="Sociis volutpat maecenas pretium rhoncus praesent massa"
+                                                   Id="Leo lobortis feugiat duis malesuada"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="60"
+                                                   ProductInformationId="15"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Montes penatibus nostra" />
+                        <Models:ProductInformation CategoryId="76"
+                                                   Description="Accumsan taciti bibendum sodales metus sed nunc"
+                                                   Id="Lacinia laoreet nascetur mus"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="13"
+                                                   ProductInformationId="49"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Posuere massa" />
+                        <Models:ProductInformation CategoryId="27"
+                                                   Description="Morbi sem tellus neque tempor netus viverra tempus aliquam"
+                                                   Id="Potenti placerat pulvinar porttitor"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="95"
+                                                   ProductInformationId="29"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Parturient primis" />
+                        <Models:ProductInformation CategoryId="22"
+                                                   Description="Integer dictumst amet nulla porta tortor turpis eleifend purus"
+                                                   Id="Vestibulum pretium sociosqu suscipit morbi"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="59"
+                                                   ProductInformationId="78"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Neque per adipiscing" />
+                    </Models:Product.Information>
+                    <Models:Product.ServiceType>
+                        <Models:ServiceType Description="Mollis hendrerit himenaeos"
+                                            Id="Vestibulum dis"
+                                            ServiceTypeId="37"
+                                            Status="False"
+                                            Version="Vestibulum lacus" />
+                    </Models:Product.ServiceType>
+                </Models:Product>
+            </Models:ProductInformation.Product>
+        </Models:ProductInformation>
+        <Models:ProductInformation CategoryId="31"
+                                   Description="Risus velit quisque sit vel facilisi faucibus"
+                                   Id="Bibendum vitae phasellus"
+                                   IsNew="True"
+                                   IsPreview="False"
+                                   ProductId="63"
+                                   ProductInformationId="99"
+                                   ProductInformationDate="12/16/2015 19:33:55"
+                                   Status="True"
+                                   Version="Vestibulum praesent sit">
+            <Models:ProductInformation.Category>
+                <Models:Category CategoryId="77"
+                                 Description="Parturient facilisi convallis non"
+                                 Icon="Per sed varius dignissim elementum"
+                                 Id="Dictumst nunc consequat eleifend class"
+                                 Status="False"
+                                 Version="Aenean odio conubia vestibulum" />
+            </Models:ProductInformation.Category>
+            <Models:ProductInformation.Product>
+                <Models:Product Description="Cubilia mauris orci faucibus etiam"
+                                Icon="Pede quam"
+                                Id="Curae donec"
+                                ProductId="59"
+                                ServiceTypeId="63"
+                                Status="True"
+                                Version="Vivamus parturient">
+                    <Models:Product.AvailableCategories>
+                        <Models:Category CategoryId="18"
+                                         Description="Sed dis eget lorem litora"
+                                         Icon="Senectus himenaeos magna elit posuere"
+                                         Id="Laoreet natoque lacus"
+                                         Status="False"
+                                         Version="Imperdiet enim erat luctus" />
+                        <Models:Category CategoryId="41"
+                                         Description="Magnis massa potenti mattis nibh"
+                                         Icon="Malesuada nisi mauris nisl suscipit"
+                                         Id="Sociosqu eros est"
+                                         Status="True"
+                                         Version="Pretium rhoncus" />
+                        <Models:Category CategoryId="13"
+                                         Description="Mollis parturient ultrices mus vehicula"
+                                         Icon="Volutpat sodales"
+                                         Id="Hac nunc torquent penatibus leo"
+                                         Status="False"
+                                         Version="Viverra aliquam porttitor montes integer" />
+                        <Models:Category CategoryId="24"
+                                         Description="Ornare odio orci pede"
+                                         Icon="Vestibulum tincidunt tristique metus non"
+                                         Id="Nostra vestibulum nec"
+                                         Status="True"
+                                         Version="Ultricies quam per" />
+                        <Models:Category CategoryId="76"
+                                         Description="Sed platea urna primis"
+                                         Icon="Cras adipiscing venenatis"
+                                         Id="Quis maecenas"
+                                         Status="False"
+                                         Version="Quisque sem vulputate" />
+                    </Models:Product.AvailableCategories>
+                    <Models:Product.Information>
+                        <Models:ProductInformation CategoryId="14"
+                                                   Description="Ante vivamus nam aliquam sed varius arcu aenean vitae"
+                                                   Id="Auctor dapibus vestibulum"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="30"
+                                                   ProductInformationId="44"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Cras euismod feugiat morbi sem" />
+                        <Models:ProductInformation CategoryId="17"
+                                                   Description="Mauris class dis habitant nullam curae est hac leo mus"
+                                                   Id="Congue gravida"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="72"
+                                                   ProductInformationId="34"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Cursus iaculis lobortis" />
+                        <Models:ProductInformation CategoryId="40"
+                                                   Description="Inceptos donec etiam interdum diam lobortis"
+                                                   Id="Parturient nulla vestibulum duis"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="43"
+                                                   ProductInformationId="91"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Ante augue fringilla arcu dolor" />
+                        <Models:ProductInformation CategoryId="69"
+                                                   Description="Nascetur eget nec aptent auctor elit pharetra congue cursus"
+                                                   Id="Fames lacinia vestibulum adipiscing"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="67"
+                                                   ProductInformationId="46"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Lectus libero habitasse nascetur" />
+                        <Models:ProductInformation CategoryId="25"
+                                                   Description="Fusce aliquet blandit commodo dictum non"
+                                                   Id="Ipsum diam"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="30"
+                                                   ProductInformationId="75"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Justo sagittis" />
+                    </Models:Product.Information>
+                    <Models:Product.ServiceType>
+                        <Models:ServiceType Description="Facilisis habitant"
+                                            Id="Nullam aptent"
+                                            ServiceTypeId="39"
+                                            Status="False"
+                                            Version="Fusce quis" />
+                    </Models:Product.ServiceType>
+                </Models:Product>
+            </Models:ProductInformation.Product>
+        </Models:ProductInformation>
+        <Models:ProductInformation CategoryId="22"
+                                   Description="Conubia lectus placerat cubilia per libero sed pulvinar sagittis enim"
+                                   Id="Curabitur vestibulum accumsan phasellus rutrum"
+                                   IsNew="True"
+                                   IsPreview="False"
+                                   ProductId="69"
+                                   ProductInformationId="74"
+                                   ProductInformationDate="12/16/2015 19:33:55"
+                                   Status="True"
+                                   Version="Sit arcu">
+            <Models:ProductInformation.Category>
+                <Models:Category CategoryId="45"
+                                 Description="Semper dictumst sociis convallis taciti"
+                                 Icon="Tellus ante arcu morbi"
+                                 Id="Nunc bibendum aliquam aliquet amet"
+                                 Status="False"
+                                 Version="Vestibulum neque dignissim diam" />
+            </Models:ProductInformation.Category>
+            <Models:ProductInformation.Product>
+                <Models:Product Description="Eget elit"
+                                Icon="Enim adipiscing tempus"
+                                Id="Tempor blandit vel vestibulum"
+                                ProductId="93"
+                                ServiceTypeId="15"
+                                Status="True"
+                                Version="Augue parturient ornare ante dolor">
+                    <Models:Product.AvailableCategories>
+                        <Models:Category CategoryId="82"
+                                         Description="Pharetra feugiat"
+                                         Icon="Placerat class dictum parturient penatibus"
+                                         Id="Adipiscing imperdiet malesuada"
+                                         Status="False"
+                                         Version="Vestibulum pulvinar urna curae" />
+                        <Models:Category CategoryId="67"
+                                         Description="Lectus libero cras duis ligula"
+                                         Icon="Litora porttitor tincidunt leo mus"
+                                         Id="Donec etiam vestibulum fusce"
+                                         Status="True"
+                                         Version="Nec adipiscing non tristique parturient" />
+                        <Models:Category CategoryId="78"
+                                         Description="Lorem sagittis magnis mattis senectus"
+                                         Icon="Sociosqu nunc iaculis"
+                                         Id="Luctus gravida"
+                                         Status="False"
+                                         Version="Vestibulum amet" />
+                        <Models:Category CategoryId="93"
+                                         Description="Suscipit per venenatis"
+                                         Icon="Vulputate sed lacinia curabitur torquent"
+                                         Id="Ultricies morbi vestibulum"
+                                         Status="True"
+                                         Version="Mauris mollis adipiscing" />
+                        <Models:Category CategoryId="65"
+                                         Description="Phasellus sem consequat convallis vehicula"
+                                         Icon="Vestibulum natoque montes vestibulum dignissim"
+                                         Id="Ultrices laoreet nulla proin parturient"
+                                         Status="False"
+                                         Version="Volutpat adipiscing maecenas nostra" />
+                    </Models:Product.AvailableCategories>
+                    <Models:Product.Information>
+                        <Models:ProductInformation CategoryId="53"
+                                                   Description="Ligula sem sit vel lorem dapibus egestas euismod feugiat"
+                                                   Id="Nulla vestibulum conubia nisi nisl"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="45"
+                                                   ProductInformationId="37"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Fringilla turpis" />
+                        <Models:ProductInformation CategoryId="96"
+                                                   Description="Erat morbi eros nam senectus nulla proin augue"
+                                                   Id="Habitasse sed porta"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="55"
+                                                   ProductInformationId="48"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Nunc varius" />
+                        <Models:ProductInformation CategoryId="83"
+                                                   Description="Nibh sed gravida dolor nisi litora dis nisl sociosqu fames nunc odio"
+                                                   Id="Aenean mauris odio"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="14"
+                                                   ProductInformationId="10"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Vestibulum aptent auctor orci dapibus" />
+                        <Models:ProductInformation CategoryId="32"
+                                                   Description="Felis suscipit orci pede quam est quis torquent"
+                                                   Id="Pede adipiscing velit"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="94"
+                                                   ProductInformationId="72"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Congue himenaeos hac egestas" />
+                        <Models:ProductInformation CategoryId="25"
+                                                   Description="Luctus hac magnis leo mus nec ipsum"
+                                                   Id="Euismod quam"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="87"
+                                                   ProductInformationId="19"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Nascetur quis cursus vestibulum vestibulum" />
+                    </Models:Product.Information>
+                    <Models:Product.ServiceType>
+                        <Models:ServiceType Description="Eros tortor facilisis eleifend nam"
+                                            Id="Erat elementum commodo"
+                                            ServiceTypeId="77"
+                                            Status="False"
+                                            Version="Netus nibh parturient fermentum" />
+                    </Models:Product.ServiceType>
+                </Models:Product>
+            </Models:ProductInformation.Product>
+        </Models:ProductInformation>
+        <Models:ProductInformation CategoryId="31"
+                                   Description="Risus velit quisque sit vel facilisi faucibus"
+                                   Id="Bibendum vitae phasellus"
+                                   IsNew="True"
+                                   IsPreview="False"
+                                   ProductId="63"
+                                   ProductInformationId="99"
+                                   ProductInformationDate="12/16/2015 19:33:55"
+                                   Status="True"
+                                   Version="Vestibulum praesent sit">
+            <Models:ProductInformation.Category>
+                <Models:Category CategoryId="77"
+                                 Description="Parturient facilisi convallis non"
+                                 Icon="Per sed varius dignissim elementum"
+                                 Id="Dictumst nunc consequat eleifend class"
+                                 Status="False"
+                                 Version="Aenean odio conubia vestibulum" />
+            </Models:ProductInformation.Category>
+            <Models:ProductInformation.Product>
+                <Models:Product Description="Cubilia mauris orci faucibus etiam"
+                                Icon="Pede quam"
+                                Id="Curae donec"
+                                ProductId="59"
+                                ServiceTypeId="63"
+                                Status="True"
+                                Version="Vivamus parturient">
+                    <Models:Product.AvailableCategories>
+                        <Models:Category CategoryId="18"
+                                         Description="Sed dis eget lorem litora"
+                                         Icon="Senectus himenaeos magna elit posuere"
+                                         Id="Laoreet natoque lacus"
+                                         Status="False"
+                                         Version="Imperdiet enim erat luctus" />
+                        <Models:Category CategoryId="41"
+                                         Description="Magnis massa potenti mattis nibh"
+                                         Icon="Malesuada nisi mauris nisl suscipit"
+                                         Id="Sociosqu eros est"
+                                         Status="True"
+                                         Version="Pretium rhoncus" />
+                        <Models:Category CategoryId="13"
+                                         Description="Mollis parturient ultrices mus vehicula"
+                                         Icon="Volutpat sodales"
+                                         Id="Hac nunc torquent penatibus leo"
+                                         Status="False"
+                                         Version="Viverra aliquam porttitor montes integer" />
+                        <Models:Category CategoryId="24"
+                                         Description="Ornare odio orci pede"
+                                         Icon="Vestibulum tincidunt tristique metus non"
+                                         Id="Nostra vestibulum nec"
+                                         Status="True"
+                                         Version="Ultricies quam per" />
+                        <Models:Category CategoryId="76"
+                                         Description="Sed platea urna primis"
+                                         Icon="Cras adipiscing venenatis"
+                                         Id="Quis maecenas"
+                                         Status="False"
+                                         Version="Quisque sem vulputate" />
+                    </Models:Product.AvailableCategories>
+                    <Models:Product.Information>
+                        <Models:ProductInformation CategoryId="14"
+                                                   Description="Ante vivamus nam aliquam sed varius arcu aenean vitae"
+                                                   Id="Auctor dapibus vestibulum"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="30"
+                                                   ProductInformationId="44"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Cras euismod feugiat morbi sem" />
+                        <Models:ProductInformation CategoryId="17"
+                                                   Description="Mauris class dis habitant nullam curae est hac leo mus"
+                                                   Id="Congue gravida"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="72"
+                                                   ProductInformationId="34"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Cursus iaculis lobortis" />
+                        <Models:ProductInformation CategoryId="40"
+                                                   Description="Inceptos donec etiam interdum diam lobortis"
+                                                   Id="Parturient nulla vestibulum duis"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="43"
+                                                   ProductInformationId="91"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Ante augue fringilla arcu dolor" />
+                        <Models:ProductInformation CategoryId="69"
+                                                   Description="Nascetur eget nec aptent auctor elit pharetra congue cursus"
+                                                   Id="Fames lacinia vestibulum adipiscing"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="67"
+                                                   ProductInformationId="46"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Lectus libero habitasse nascetur" />
+                        <Models:ProductInformation CategoryId="25"
+                                                   Description="Fusce aliquet blandit commodo dictum non"
+                                                   Id="Ipsum diam"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="30"
+                                                   ProductInformationId="75"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Justo sagittis" />
+                    </Models:Product.Information>
+                    <Models:Product.ServiceType>
+                        <Models:ServiceType Description="Facilisis habitant"
+                                            Id="Nullam aptent"
+                                            ServiceTypeId="39"
+                                            Status="False"
+                                            Version="Fusce quis" />
+                    </Models:Product.ServiceType>
+                </Models:Product>
+            </Models:ProductInformation.Product>
+        </Models:ProductInformation>
+        <Models:ProductInformation CategoryId="22"
+                                   Description="Conubia lectus placerat cubilia per libero sed pulvinar sagittis enim"
+                                   Id="Curabitur vestibulum accumsan phasellus rutrum"
+                                   IsNew="True"
+                                   IsPreview="False"
+                                   ProductId="69"
+                                   ProductInformationId="74"
+                                   ProductInformationDate="12/16/2015 19:33:55"
+                                   Status="True"
+                                   Version="Sit arcu">
+            <Models:ProductInformation.Category>
+                <Models:Category CategoryId="45"
+                                 Description="Semper dictumst sociis convallis taciti"
+                                 Icon="Tellus ante arcu morbi"
+                                 Id="Nunc bibendum aliquam aliquet amet"
+                                 Status="False"
+                                 Version="Vestibulum neque dignissim diam" />
+            </Models:ProductInformation.Category>
+            <Models:ProductInformation.Product>
+                <Models:Product Description="Eget elit"
+                                Icon="Enim adipiscing tempus"
+                                Id="Tempor blandit vel vestibulum"
+                                ProductId="93"
+                                ServiceTypeId="15"
+                                Status="True"
+                                Version="Augue parturient ornare ante dolor">
+                    <Models:Product.AvailableCategories>
+                        <Models:Category CategoryId="82"
+                                         Description="Pharetra feugiat"
+                                         Icon="Placerat class dictum parturient penatibus"
+                                         Id="Adipiscing imperdiet malesuada"
+                                         Status="False"
+                                         Version="Vestibulum pulvinar urna curae" />
+                        <Models:Category CategoryId="67"
+                                         Description="Lectus libero cras duis ligula"
+                                         Icon="Litora porttitor tincidunt leo mus"
+                                         Id="Donec etiam vestibulum fusce"
+                                         Status="True"
+                                         Version="Nec adipiscing non tristique parturient" />
+                        <Models:Category CategoryId="78"
+                                         Description="Lorem sagittis magnis mattis senectus"
+                                         Icon="Sociosqu nunc iaculis"
+                                         Id="Luctus gravida"
+                                         Status="False"
+                                         Version="Vestibulum amet" />
+                        <Models:Category CategoryId="93"
+                                         Description="Suscipit per venenatis"
+                                         Icon="Vulputate sed lacinia curabitur torquent"
+                                         Id="Ultricies morbi vestibulum"
+                                         Status="True"
+                                         Version="Mauris mollis adipiscing" />
+                        <Models:Category CategoryId="65"
+                                         Description="Phasellus sem consequat convallis vehicula"
+                                         Icon="Vestibulum natoque montes vestibulum dignissim"
+                                         Id="Ultrices laoreet nulla proin parturient"
+                                         Status="False"
+                                         Version="Volutpat adipiscing maecenas nostra" />
+                    </Models:Product.AvailableCategories>
+                    <Models:Product.Information>
+                        <Models:ProductInformation CategoryId="53"
+                                                   Description="Ligula sem sit vel lorem dapibus egestas euismod feugiat"
+                                                   Id="Nulla vestibulum conubia nisi nisl"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="45"
+                                                   ProductInformationId="37"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Fringilla turpis" />
+                        <Models:ProductInformation CategoryId="96"
+                                                   Description="Erat morbi eros nam senectus nulla proin augue"
+                                                   Id="Habitasse sed porta"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="55"
+                                                   ProductInformationId="48"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Nunc varius" />
+                        <Models:ProductInformation CategoryId="83"
+                                                   Description="Nibh sed gravida dolor nisi litora dis nisl sociosqu fames nunc odio"
+                                                   Id="Aenean mauris odio"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="14"
+                                                   ProductInformationId="10"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Vestibulum aptent auctor orci dapibus" />
+                        <Models:ProductInformation CategoryId="32"
+                                                   Description="Felis suscipit orci pede quam est quis torquent"
+                                                   Id="Pede adipiscing velit"
+                                                   IsNew="False"
+                                                   IsPreview="True"
+                                                   ProductId="94"
+                                                   ProductInformationId="72"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="False"
+                                                   Version="Congue himenaeos hac egestas" />
+                        <Models:ProductInformation CategoryId="25"
+                                                   Description="Luctus hac magnis leo mus nec ipsum"
+                                                   Id="Euismod quam"
+                                                   IsNew="True"
+                                                   IsPreview="False"
+                                                   ProductId="87"
+                                                   ProductInformationId="19"
+                                                   ProductInformationDate="12/16/2015 19:33:55"
+                                                   Status="True"
+                                                   Version="Nascetur quis cursus vestibulum vestibulum" />
+                    </Models:Product.Information>
+                    <Models:Product.ServiceType>
+                        <Models:ServiceType Description="Eros tortor facilisis eleifend nam"
+                                            Id="Erat elementum commodo"
+                                            ServiceTypeId="77"
+                                            Status="False"
+                                            Version="Netus nibh parturient fermentum" />
+                    </Models:Product.ServiceType>
+                </Models:Product>
+            </Models:ProductInformation.Product>
+        </Models:ProductInformation>
+    </ViewModels:ProductInformationPageViewModel.Items>
+</ViewModels:ProductInformationPageViewModel>

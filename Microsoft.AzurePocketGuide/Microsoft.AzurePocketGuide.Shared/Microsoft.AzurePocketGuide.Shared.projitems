@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\LowerCaseConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\IconConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Category.cs" />
@@ -22,7 +23,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IServicesRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ServicesRepository.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ServiceDetailPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProductInformationPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProductPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ServicesPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPage.cs" />
   </ItemGroup>

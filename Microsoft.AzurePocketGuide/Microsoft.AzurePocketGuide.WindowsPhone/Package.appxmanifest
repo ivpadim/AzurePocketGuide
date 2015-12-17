@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="14ca6a95-676c-4949-9fde-8035f424ef67" Publisher="CN=v-ivpadr" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="14ca6a95-676c-4949-9fde-8035f424ef67" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="59378IvanPadron.AzurePocketGuide" Publisher="CN=FA4A4C2F-0AB9-4C6D-A739-5B0FE05FE9F4" Version="1.1.0.2" />
+  <mp:PhoneIdentity PhoneProductId="b6c37678-43cb-4536-8026-5dcf7eada27b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Microsoft.AzurePocketGuide.WindowsPhone</DisplayName>
-    <PublisherDisplayName>v-ivpadr</PublisherDisplayName>
+    <DisplayName>Azure Pocket Guide</DisplayName>
+    <PublisherDisplayName>Ivan Padron</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>

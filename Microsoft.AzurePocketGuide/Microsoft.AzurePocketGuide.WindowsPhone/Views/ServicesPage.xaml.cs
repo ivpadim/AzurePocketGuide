@@ -20,5 +20,6 @@ namespace Microsoft.AzurePocketGuide.Views
 
 			viewModel.SelectedItem = selectedItem;
 		}
+
 	}
 }
